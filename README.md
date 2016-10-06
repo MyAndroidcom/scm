@@ -82,7 +82,7 @@ ibatis(mybatis):持久层框架，基于SQL，简单易用，效律较好。。�
 		return i;
 	}
 ```
-BuyOrder实体中加入public List<BuyOrderDetail> buyOrderDetails;
+BuyOrder实体中加入public List<BuyOrderDetail> buyOrderDetails;            
 2.通过关键字分页查询,多条件查询       
 封装一个page实体，在page实体中加入一个private T paramEntity;//多条件查询属性,前台(rasyUI+Jquery)会发送请求,自动携带查询参数到后台。
 ```
@@ -134,8 +134,8 @@ xml中sql语句
             <if test="paramEntity.supAddress!=null">and sup_address like #{paramEntity.supAddress}</if>
         </where>
     </select>
-```
-3.利用反射技术完成对业务逻辑层BaseService的抽取
+```     
+3.利用反射技术完成对业务逻辑层BaseService的抽取   
 ```
 //服务器启动就加载
 public class BaseServiceImpl<T> implements BaseService<T> {
